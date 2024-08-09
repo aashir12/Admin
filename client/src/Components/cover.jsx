@@ -4,7 +4,6 @@ import CardCreate from './cardCreate';
 import axios from 'axios';
 
 const Cover = () => {
-    const [data, setData] = useState([]);
     const [checker, setChecker] = useState(0);
     const [col, setCol] = useState(true);
     const [item, setItem] = useState({
@@ -12,39 +11,15 @@ const Cover = () => {
         link: ''
     });
 
-    useEffect(() => {
-        axios.get('https://picsum.photos/v2/list?page=1&limit=6')
-            .then((res) => {
-                setData(res.data);
-            })
-            .catch((error) => {
-                console.error('Error fetching data:', error);
-            });
-    }, []);
 
-    const handleCardClick = () => (
-        setChecker(1)
-    );
 
-    const Remove = () => {
-        setChecker(0);
-    };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setData([...data, item]);
-        setChecker(0); 
-        setItem({ arther: '', link: '' }); 
-    };
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setItem(prev => ({ ...prev, [name]: value }));
-    };
+
 
     return (
         <div className='cover'>
-            <div className='coverlft'>
+            <div className='coverlft '>
                 <div className='logo'>
                     <img src='/images/logo.PNG' style={{ width: '100%', borderBottom: "0.3px solid grey", paddingBottom: "10%",cursor:'pointer' }} onClick={()=>{setCol(!col)}}/>
                 </div>
@@ -67,25 +42,11 @@ const Cover = () => {
                     <Header />
                 </div>
                 <div className='content'>
-                    {checker === 1 &&
-                        <div className="form-popup" id="myForm">
-                            <form onSubmit={handleSubmit} className="form-container">
-                                <h1>Add a Post</h1>
-                                <label htmlFor="arther"><b>Arther Name</b></label>
-                                <input type="text" placeholder="John Allen" name="arther" value={item.arther} onChange={handleChange} required />
-                                <label htmlFor="link"><b>Image Link</b></label>
-                                <input type="text" placeholder="www.link.com" name="link" value={item.link} onChange={handleChange} required />
-                                <button type="submit" className="btn">Submit</button>
-                                <button type="button" className="btn cancel" onClick={Remove}>Close</button>
-                            </form>
-                        </div>
-                    }
-                    <h1>My Projects</h1>
-                    <div className='cards'>
-                        <CardCreate url="/images/new.PNG" Arther="Add New" styler={{ cursor: "pointer" }} click={handleCardClick} />
-                        {data.map((item) => (
-                            <CardCreate key={item.id} url={item.url} Arther={item.author} width={item.width} height={item.height} />
-                        ))}
+                   
+                    <h1 className='text-red-300'>My Projects</h1>
+                    <div className='cards'>                       
+                            <CardCreate key='1' url={item.url} Arther='Author' width='200px' height='400px' />
+                    
                     </div>
                 </div>
             </div>

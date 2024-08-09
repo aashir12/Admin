@@ -18,9 +18,7 @@
   flex-basis: 90%;
   height: 100%;
   flex-direction: column;
-
   width: 100%;
-
 }
 .cover .coverlft{
   display: flex;
