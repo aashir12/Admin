@@ -1,18 +1,14 @@
 import React from 'react';
+import {Card} from 'antd'
 
-const CardCreate = ({ id, url, Arther,click,styler }) => {
+const {Meta}=Card;
+
+const CardCreate = ({ title,clickable=''}) => {
   return (
     <>
-   <div className='cardCover' onClick={click} style={styler}>
-
-        <div className='image'><img src="/images/new.PNG"/></div>
-        <h4>{Arther}</h4>
-        <h5>or try a <span style={{ color: 'rgb(250, 120, 47)' }}>sample project</span></h5>
-        <div className='readDel'>
-        <h5 style={{cursor:'pointer'}}>Read More-></h5>
-        <h5 style={{color:'red',cursor:'pointer'}}>Delete</h5>
-        </div>
-      </div>
+      <Card style={{width:'300px',height:'200px'}} className={clickable!==''?clickable:null} cover={<img src="/images/new.PNG" alt='new.png'/>}>
+        <Meta title={title}></Meta>
+      </Card>
     </>
   );
 };
