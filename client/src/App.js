@@ -1,24 +1,20 @@
 import React, { useState } from "react";
 import Header from "./Components/header";
-import axios from "axios";
 import Sidebar from "./Components/sidebar";
-import Home from "./Components/home";
-import {Routes,Route,BrowserRouter} from 'react-router-dom'
+import Login from "./pages/login";
+import Home from "./pages/home";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import PostForm from './pages/createPost'
+import AfterLog from "./pages/afterlog";
 
 const App = () => {
   return (
     <BrowserRouter>
       <div className="cover">
-        <Sidebar />
-        <div className="coverrft">
-          <div>
-            <Header />
-          </div>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/create-post" element={'this is a new post'} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard/*" element={<AfterLog />} />
+        </Routes>
       </div>
     </BrowserRouter>
   );
