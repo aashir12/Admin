@@ -1,15 +1,14 @@
 import React from "react";
 import { Button, Checkbox, Form, Input } from "antd";
-import axios from 'axios'
+import axios from "axios";
 
 
 const onFinish = async (values) => {
-  console.log("Success:", values);
-  try {
+    try {
+    console.log('values',values)
     const res = await axios.post("http://localhost:5000/users/login", values);
     if (res.status === 200) {
       alert("Logged in successfully");
-      console.log(res.data);
     }
   } catch (err) {
     console.error("Error:", err);

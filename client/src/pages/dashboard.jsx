@@ -5,7 +5,6 @@ import Home from "./home";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import PostForm from "./createPost";
 
-
 const AfterLog = () => {
   return (
     <div className="cover">

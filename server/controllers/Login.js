@@ -1,7 +1,5 @@
-const Login = require('../models/login')
+const Login = require("../models/login");
 const bcrypt = require("bcrypt");
-
-
 
 const sign = async (req, res) => {
   const { username, password, phone, age } = req.body;
@@ -23,7 +21,6 @@ const sign = async (req, res) => {
     res.status(500).send("Server error");
   }
 };
-
 
 const login = async (req, res) => {
   const { username, password } = req.body;
@@ -48,5 +45,4 @@ const login = async (req, res) => {
   }
 };
 
-
-module.exports={sign,login}
+module.exports = { sign, login };

@@ -1,7 +1,6 @@
-
 const Post = require("../models/post");
 
- const getPost = async function (req, res, next) {
+const getPost = async function (req, res, next) {
   const posts = await Post.find();
   res.send(posts);
 };
@@ -18,4 +17,4 @@ const createPost = async function (req, res, next) {
   res.send("success");
 };
 
-module.exports={createPost,getPost}
+module.exports = { createPost, getPost };

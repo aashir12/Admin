@@ -59,6 +59,13 @@ const PostForm = () => {
           <Input placeholder="Enter the title" />
         </Form.Item>
         <Form.Item
+          label="Image URL"
+          name="Image"
+          rules={[{ required: true, message: "Please enter the Image URL!" }]}
+        >
+          <Input placeholder="Enter the title" />
+        </Form.Item>
+        <Form.Item
           label="Category"
           name="category"
           rules={[{ required: true, message: "Please select a category!" }]}

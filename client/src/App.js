@@ -4,8 +4,7 @@ import Sidebar from "./Components/sidebar";
 import Login from "./pages/login";
 import Home from "./pages/home";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import PostForm from './pages/createPost'
-import AfterLog from "./pages/afterlog";
+import AfterLog from "./pages/dashboard";
 
 const App = () => {
   return (

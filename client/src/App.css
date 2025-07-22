@@ -1,38 +1,32 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.cover{
-
+.cover {
   display: flex;
 
   height: 100vh;
   width: 100%;
- 
-
-
 }
-.cover .coverrft{
+.cover .coverrft {
   display: flex;
   flex-basis: 90%;
   height: 100%;
   flex-direction: column;
   width: 100%;
 }
-.cover .coverlft{
+.cover .coverlft {
   display: flex;
   flex-basis: 12%;
   height: 100%;
   flex-direction: column;
   width: 100%;
-  
-
 }
-.cover .coverlft:nth-last-child(3){
+.cover .coverlft:nth-last-child(3) {
   padding-top: 3vmax;
 }
-.lftCol{
+.lftCol {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -40,48 +34,42 @@
   width: 100%;
   text-align: start;
   color: #555;
- 
-
 }
-.lftCol h3{
+.lftCol h3 {
   cursor: pointer;
 }
-.logo{
+.logo {
   height: 10%;
   text-align: center;
   font-size: 2vmax;
   padding: 15px;
   justify-content: space-around;
 }
-.colTop{
+.colTop {
   flex-basis: 43vh;
   padding: 1.2vmax;
-  
-  
 }
-.colBottom{
-
+.colBottom {
   flex-basis: 43vh;
   padding: 1.2vmax;
-   display: flex;
-   flex-direction: column;
-   justify-content: end;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
-.header{
+.header {
   display: flex;
   justify-content: end;
   padding: 15px;
   gap: 20px;
 }
-.lftHead>h4{
+.lftHead > h4 {
   color: rgb(250, 120, 47);
   font-weight: lighter;
 }
-.coverrft .content{
+.coverrft .content {
   padding: 20px;
 }
-.cards{
+.cards {
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
@@ -89,18 +77,18 @@
   height: 100%;
   box-sizing: border-box;
 }
-.clickable-Cards{
+.clickable-Cards {
   cursor: pointer;
 }
-.cardCover{
+.cardCover {
   width: 300px;
   margin: 10px;
   text-align: center;
 }
-.cardCover img{
+.cardCover img {
   width: 100%;
   border-radius: 10px;
 }
-.content > h1{
+.content > h1 {
   margin: 2% 3%;
 }

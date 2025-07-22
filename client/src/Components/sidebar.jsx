@@ -1,7 +1,7 @@
-import React,{useState} from 'react'
+import React, { useState } from "react";
 
 const Sidebar = () => {
-     const [col, setCol] = useState(true);
+  const [col, setCol] = useState(true);
   return (
     <>
       <div className="coverlft ">
@@ -33,7 +33,7 @@ const Sidebar = () => {
                 className="fa-solid fa-database"
                 style={{ paddingRight: "10%", paddingTop: "10%" }}
               ></i>
-              My Projects
+              Dashboard{" "}
             </h3>
             <h3
               style={{
@@ -90,6 +90,6 @@ const Sidebar = () => {
       </div>
     </>
   );
-}
+};
 
-export default Sidebar
+export default Sidebar;

@@ -1,6 +1,5 @@
-import React from 'react'
+import React from "react";
 import { FaRegUserCircle } from "react-icons/fa";
-
 
 const Header = () => {
   return (
@@ -16,6 +15,6 @@ const Header = () => {
       </div>
     </>
   );
-}
+};
 
-export default Header
+export default Header;
